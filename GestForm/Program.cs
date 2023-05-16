@@ -34,7 +34,12 @@ public class Program
 
     public static string GetMessageForNumber(int number)
     {
-        return number.ToString();
+        var message = number.ToString();
+
+        if ((number % 3).Equals(0)) message = "Gest";
+        else if ((number % 5).Equals(0)) message = "Form";
+        
+        return message;
     }
 
     #endregion

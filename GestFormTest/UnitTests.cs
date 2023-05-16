@@ -38,4 +38,18 @@ public class UnitTests
         var message = Program.GetMessageForNumber(2);
         Assert.Equal("2", message);
     }
+    
+    [Fact]
+    public void GetMessageForNumber_3_Gest()
+    {
+        var message = Program.GetMessageForNumber(3);
+        Assert.Equal("Gest", message);
+    }
+    
+    [Fact]
+    public void GetMessageForNumber_5_Form()
+    {
+        var message = Program.GetMessageForNumber(5);
+        Assert.Equal("Form", message);
+    }
 }
