@@ -1,6 +1,6 @@
 ﻿namespace GestForm;
 
-public abstract class Program
+public class Program
 {
     #region Statements
 
@@ -30,7 +30,12 @@ public abstract class Program
         }
 
         return randomNumbers;
-    } 
+    }
+
+    public static string GetMessageForNumber(int number)
+    {
+        return number.ToString();
+    }
 
     #endregion
 }

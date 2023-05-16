@@ -24,4 +24,18 @@ public class UnitTests
         var result = Program.GenerateRandomNumbers(_randomParams);
         Assert.True(result.All(n => n >= _randomParams.LowerLimit && n <= _randomParams.UpperLimit));
     }
+
+    [Fact]
+    public void GetMessageForNumber_1_1()
+    {
+        var message = Program.GetMessageForNumber(1);
+        Assert.Equal("1", message);
+    }
+    
+    [Fact]
+    public void GetMessageForNumber_2_2()
+    {
+        var message = Program.GetMessageForNumber(2);
+        Assert.Equal("2", message);
+    }
 }
