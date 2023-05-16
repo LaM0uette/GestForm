@@ -1,8 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1bb64b85_002D0759_002D49ab_002D878e_002D4b240be8ad09/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GenerateRandomNumbers_CountEqual50_50" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::8BA1725D-9381-4E62-AD2B-C189469B532F::net7.0::GestFormTest.UnitTest1.GenerateRandomNumbers_CountEqual50_50&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::8BA1725D-9381-4E62-AD2B-C189469B532F::net7.0::GestFormTest.UnitTest1.GenerateRandomNumbers_ReturnsNumbersWithinLimits&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::8BA1725D-9381-4E62-AD2B-C189469B532F::net7.0::GestFormTest.UnitTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c196547d_002D56e0_002D4331_002D8f43_002D7ebcd9a49283/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GenerateRandomNumbers_CountEqual50_50 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

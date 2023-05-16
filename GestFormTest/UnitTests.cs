@@ -2,7 +2,7 @@ using GestForm;
 
 namespace GestFormTest;
 
-public class UnitTest1
+public class UnitTests
 {
     private readonly Program.RandomParams _randomParams = new()
     {

@@ -1,14 +1,20 @@
 ﻿namespace GestForm;
 
-public class Program
+public abstract class Program
 {
+    #region Statements
+
     public struct RandomParams
     {
         public int LowerLimit;
         public int UpperLimit;
         public int Count;
     }
-    
+
+    #endregion
+
+    #region Functions
+
     public static void Main()
     {
     }
@@ -25,4 +31,6 @@ public class Program
 
         return randomNumbers;
     } 
+
+    #endregion
 }
