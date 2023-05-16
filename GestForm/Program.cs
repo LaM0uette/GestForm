@@ -36,7 +36,8 @@ public class Program
     {
         var message = number.ToString();
 
-        if ((number % 3).Equals(0)) message = "Gest";
+        if ((number % 3).Equals(0) && (number % 5).Equals(0)) message = "GestForm";
+        else if ((number % 3).Equals(0)) message = "Gest";
         else if ((number % 5).Equals(0)) message = "Form";
         
         return message;

@@ -52,4 +52,11 @@ public class UnitTests
         var message = Program.GetMessageForNumber(5);
         Assert.Equal("Form", message);
     }
+    
+    [Fact]
+    public void GetMessageForNumber_15_Form()
+    {
+        var message = Program.GetMessageForNumber(15);
+        Assert.Equal("GestForm", message);
+    }
 }
