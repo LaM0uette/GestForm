@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestForm", "GestForm\GestForm.csproj", "{ACA15BEF-84AB-4ACF-BF89-ED3A698B15BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACA15BEF-84AB-4ACF-BF89-ED3A698B15BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA15BEF-84AB-4ACF-BF89-ED3A698B15BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA15BEF-84AB-4ACF-BF89-ED3A698B15BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA15BEF-84AB-4ACF-BF89-ED3A698B15BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
