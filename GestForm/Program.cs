@@ -4,8 +4,8 @@ public class Program
 {
     public struct RandomParams
     {
-        public int Lower;
-        public int Upper;
+        public int LowerLimit;
+        public int UpperLimit;
         public int Count;
     }
     
@@ -15,6 +15,14 @@ public class Program
 
     public static IEnumerable<int> GenerateRandomNumbers(RandomParams randomParams)
     {
-        
+        var randomGenerator = new Random();
+        var randomNumbers = new List<int>();
+
+        for (var i = 0; i < randomParams.Count; i++)
+        {
+            randomNumbers.Add(randomGenerator.Next(randomParams.LowerLimit, randomParams.UpperLimit + 1));
+        }
+
+        return randomNumbers;
     } 
 }

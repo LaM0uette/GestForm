@@ -6,8 +6,8 @@ public class UnitTest1
 {
     private readonly Program.RandomParams _randomParams = new()
     {
-        Lower = -1000,
-        Upper = 1000,
+        LowerLimit = -1000,
+        UpperLimit = 1000,
         Count = 50
     };
         
@@ -16,5 +16,12 @@ public class UnitTest1
     {
         var result = Program.GenerateRandomNumbers(_randomParams);
         Assert.Equal(_randomParams.Count, result.Count());
+    }
+    
+    [Fact]
+    public void GenerateRandomNumbers_ReturnsNumbersWithinLimits()
+    {
+        var result = Program.GenerateRandomNumbers(_randomParams);
+        Assert.True(result.All(n => n >= _randomParams.LowerLimit && n <= _randomParams.UpperLimit));
     }
 }
