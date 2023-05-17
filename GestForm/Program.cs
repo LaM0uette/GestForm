@@ -8,7 +8,7 @@ public static class Program
 {
     #region Statements
 
-    private static readonly List<IDivisibilityRule> rules = new()
+    private static readonly IDivisibilityRule[] rules = 
     {
         new DivisibleByThreeAndFiveRule(),
         new DivisibleByThreeRule(),
@@ -55,7 +55,7 @@ public static class Program
     private static void PrintMessage(int number)
     {
         var message = GetMessageForNumber(number);
-        Console.WriteLine(message);
+        Console.Out.WriteLineAsync(message);
     }
     
     public static string GetMessageForNumber(int number)
