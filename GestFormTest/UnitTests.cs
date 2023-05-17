@@ -43,14 +43,14 @@ public class UnitTests
     public void GetMessageForNumber_3_Gest()
     {
         var message = Program.GetMessageForNumber(3);
-        Assert.Equal("Gest", message);
+        Assert.Equal("Geste", message);
     }
     
     [Fact]
     public void GetMessageForNumber_5_Form()
     {
         var message = Program.GetMessageForNumber(5);
-        Assert.Equal("Form", message);
+        Assert.Equal("Forme", message);
     }
     
     [Fact]

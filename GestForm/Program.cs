@@ -1,4 +1,6 @@
-﻿namespace GestForm;
+﻿using GestForm.DivisibilityRules;
+
+namespace GestForm;
 
 public class Program
 {
@@ -10,6 +12,13 @@ public class Program
         public int UpperLimit;
         public int Count;
     }
+    
+    private static List<IDivisibilityRule> rules = new()
+    {
+        new DivisibleByThreeAndFiveRule(),
+        new DivisibleByThreeRule(),
+        new DivisibleByFiveRule()
+    };
 
     #endregion
 
@@ -17,6 +26,22 @@ public class Program
 
     public static void Main()
     {
+        // Création des paramètres de nombres aléatoires
+        var randomParam = new RandomParams
+        {
+            LowerLimit = -1000,
+            UpperLimit = 1000,
+            Count = 50
+        };
+        
+        // Générer des nombres aléatoires
+        var numbers = GenerateRandomNumbers(randomParam);
+
+        // Afficher le message pour chaque nombre
+        foreach (var number in numbers)
+        {
+            Console.WriteLine(GetMessageForNumber(number));
+        }
     }
 
     public static IEnumerable<int> GenerateRandomNumbers(RandomParams randomParams)
@@ -34,13 +59,12 @@ public class Program
 
     public static string GetMessageForNumber(int number)
     {
-        var message = number.ToString();
+        foreach (var rule in rules.Where(rule => rule.IsDivisible(number)))
+        {
+            return rule.MessageForDivisibleNumbers;
+        }
 
-        if ((number % 3).Equals(0) && (number % 5).Equals(0)) message = "GestForm";
-        else if ((number % 3).Equals(0)) message = "Gest";
-        else if ((number % 5).Equals(0)) message = "Form";
-        
-        return message;
+        return number.ToString();
     }
 
     #endregion
