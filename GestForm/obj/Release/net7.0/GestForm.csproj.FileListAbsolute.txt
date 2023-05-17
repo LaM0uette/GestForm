@@ -1,0 +1,15 @@
+D:\__PROG__\GestForm\GestForm\bin\Release\net7.0\GestForm.exe
+D:\__PROG__\GestForm\GestForm\bin\Release\net7.0\GestForm.deps.json
+D:\__PROG__\GestForm\GestForm\bin\Release\net7.0\GestForm.runtimeconfig.json
+D:\__PROG__\GestForm\GestForm\bin\Release\net7.0\GestForm.dll
+D:\__PROG__\GestForm\GestForm\bin\Release\net7.0\GestForm.pdb
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.csproj.AssemblyReference.cache
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.AssemblyInfoInputs.cache
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.AssemblyInfo.cs
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.csproj.CoreCompileInputs.cache
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.dll
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\refint\GestForm.dll
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.pdb
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\GestForm.genruntimeconfig.cache
+D:\__PROG__\GestForm\GestForm\obj\Release\net7.0\ref\GestForm.dll

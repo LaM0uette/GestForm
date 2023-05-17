@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xNFe47wigrzDPBAE6lg/u7aFiMItKUjM5s4wtgNSmdXvjhHNXD6l6OSQWqxQNPaSuUVgTYfhQ7jAYZiQg6vtRQ==",
+  "dgSpecHash": "CrLKpQldNeVyXMxBzy6Ikx6j6xUvm5YOjbJwiNoFvboGy5VqeVGXj+3+ONAfOOHIvsGGr4Xbq3w9UzdwETLMTA==",
   "success": true,
   "projectFilePath": "D:\\__PROG__\\GestForm\\GestForm\\GestForm.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\doria\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.3\\microsoft.netcore.app.runtime.win-x64.7.0.3.nupkg.sha512",
+    "C:\\Users\\doria\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.3.nupkg.sha512",
+    "C:\\Users\\doria\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.3\\microsoft.aspnetcore.app.runtime.win-x64.7.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

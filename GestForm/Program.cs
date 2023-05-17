@@ -8,7 +8,8 @@ public static class Program
 {
     #region Statements
 
-    private static readonly IDivisibilityRule[] rules = 
+    private static readonly Random _randomGenerator = new();
+    private static readonly IDivisibilityRule[] _rules = 
     {
         new DivisibleByThreeAndFiveRule(),
         new DivisibleByThreeRule(),
@@ -20,12 +21,12 @@ public static class Program
     #region Functions
 
     [ExcludeFromCodeCoverage]
-    public static void Main()
+    public static async Task Main()
     {
         var randomNumbersParams = GenerateRandomNumbersParams(-1000, 1000, 50);
         var numbers = GenerateRandomNumbers(randomNumbersParams);
         
-        foreach (var number in numbers) PrintMessage(number);
+        foreach (var number in numbers) await PrintMessageAsync(number);
 
         WaitForExitProgram();
     }
@@ -42,28 +43,27 @@ public static class Program
 
     public static IEnumerable<int> GenerateRandomNumbers(RandomNumbersParams randomNumbersParams)
     {
-        var randomGenerator = new Random();
         var randomNumbers = new List<int>();
 
         for (var i = 0; i < randomNumbersParams.Count; i++)
         {
-            randomNumbers.Add(randomGenerator.Next(randomNumbersParams.LowerLimit, randomNumbersParams.UpperLimit + 1));
+            randomNumbers.Add(_randomGenerator.Next(randomNumbersParams.LowerLimit, randomNumbersParams.UpperLimit + 1));
         }
 
         return randomNumbers;
     }
 
     [ExcludeFromCodeCoverage]
-    private static void PrintMessage(int number)
+    private static async Task PrintMessageAsync(int number)
     {
         var message = GetMessageForNumber(number);
-        Console.Out.WriteLineAsync(message);
+        await Console.Out.WriteLineAsync(message);
     }
     
     public static string GetMessageForNumber(int number)
     {
         // Loop on all rules and check if number is divisible
-        foreach (var rule in rules.Where(rule => rule.IsDivisible(number)))
+        foreach (var rule in _rules.Where(rule => rule.IsDivisible(number)))
         {
             return rule.MessageForDivisibleNumbers;
         }
