@@ -24,12 +24,8 @@ public static class Program
     {
         var randomNumbersParams = GenerateRandomNumbersParams(-1000, 1000, 50);
         var numbers = GenerateRandomNumbers(randomNumbersParams);
-
-        // Afficher le message pour chaque nombre
-        foreach (var number in numbers)
-        {
-            Console.WriteLine(GetMessageForNumber(number));
-        }
+        
+        foreach (var number in numbers) PrintMessage(number);
     }
 
     public static RandomNumbersParams GenerateRandomNumbersParams(int lowerLimit, int upperLimit, int count)
@@ -55,13 +51,22 @@ public static class Program
         return randomNumbers;
     }
 
+    [ExcludeFromCodeCoverage]
+    private static void PrintMessage(int number)
+    {
+        var message = GetMessageForNumber(number);
+        Console.WriteLine(message);
+    }
+    
     public static string GetMessageForNumber(int number)
     {
+        // Loop on all rules and check if number is divisible
         foreach (var rule in rules.Where(rule => rule.IsDivisible(number)))
         {
             return rule.MessageForDivisibleNumbers;
         }
 
+        // If no rule applies, returns number converted to string
         return number.ToString();
     }
 
