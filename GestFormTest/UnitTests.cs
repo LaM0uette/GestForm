@@ -1,10 +1,11 @@
 using GestForm;
+using GestForm.RandomNumbers;
 
 namespace GestFormTest;
 
 public class UnitTests
 {
-    private readonly Program.RandomNumbersParams _randomNumbersParams = new()
+    private readonly RandomNumbersParams _randomNumbersParams = new()
     {
         LowerLimit = -1000,
         UpperLimit = 1000,

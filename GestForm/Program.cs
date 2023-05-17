@@ -1,19 +1,13 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using GestForm.DivisibilityRules;
+using GestForm.RandomNumbers;
 
 namespace GestForm;
 
-public class Program
+public static class Program
 {
     #region Statements
 
-    public struct RandomNumbersParams
-    {
-        public int LowerLimit;
-        public int UpperLimit;
-        public int Count;
-    }
-    
     private static readonly List<IDivisibilityRule> rules = new()
     {
         new DivisibleByThreeAndFiveRule(),
