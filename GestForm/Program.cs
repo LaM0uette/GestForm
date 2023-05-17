@@ -26,6 +26,8 @@ public static class Program
         var numbers = GenerateRandomNumbers(randomNumbersParams);
         
         foreach (var number in numbers) PrintMessage(number);
+
+        WaitForExitProgram();
     }
 
     public static RandomNumbersParams GenerateRandomNumbersParams(int lowerLimit, int upperLimit, int count)
@@ -70,5 +72,14 @@ public static class Program
         return number.ToString();
     }
 
+    [ExcludeFromCodeCoverage]
+    private static void WaitForExitProgram()
+    {
+#if !DEBUG
+        Console.Write("Appuyer sur Entrée pour quitter...");
+        Console.ReadKey();
+#endif
+    }
+        
     #endregion
 }
