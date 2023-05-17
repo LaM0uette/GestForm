@@ -4,25 +4,34 @@ namespace GestFormTest;
 
 public class UnitTests
 {
-    private readonly Program.RandomParams _randomParams = new()
+    private readonly Program.RandomNumbersParams _randomNumbersParams = new()
     {
         LowerLimit = -1000,
         UpperLimit = 1000,
         Count = 50
     };
+    
+    [Fact]
+    public void GenerateRandomNumbersParams_ReturnCorrectValues()
+    {
+        var randomNumbersParams = Program.GenerateRandomNumbersParams(-1000, 1000, 50);
+        Assert.Equal(-1000, randomNumbersParams.LowerLimit);
+        Assert.Equal(1000, randomNumbersParams.UpperLimit);
+        Assert.Equal(50, randomNumbersParams.Count);
+    }
         
     [Fact]
     public void GenerateRandomNumbers_CountEqual50_50()
     {
-        var result = Program.GenerateRandomNumbers(_randomParams);
-        Assert.Equal(_randomParams.Count, result.Count());
+        var result = Program.GenerateRandomNumbers(_randomNumbersParams);
+        Assert.Equal(_randomNumbersParams.Count, result.Count());
     }
     
     [Fact]
     public void GenerateRandomNumbers_ReturnsNumbersWithinLimits()
     {
-        var result = Program.GenerateRandomNumbers(_randomParams);
-        Assert.True(result.All(n => n >= _randomParams.LowerLimit && n <= _randomParams.UpperLimit));
+        var result = Program.GenerateRandomNumbers(_randomNumbersParams);
+        Assert.True(result.All(n => n >= _randomNumbersParams.LowerLimit && n <= _randomNumbersParams.UpperLimit));
     }
 
     [Fact]

@@ -6,7 +6,7 @@ public class Program
 {
     #region Statements
 
-    public struct RandomParams
+    public struct RandomNumbersParams
     {
         public int LowerLimit;
         public int UpperLimit;
@@ -26,8 +26,8 @@ public class Program
 
     public static void Main()
     {
-        var randomParams = GenerateRandomParams(-1000, 1000, 50);
-        var numbers = GenerateRandomNumbers(randomParams);
+        var randomNumbersParams = GenerateRandomNumbersParams(-1000, 1000, 50);
+        var numbers = GenerateRandomNumbers(randomNumbersParams);
 
         // Afficher le message pour chaque nombre
         foreach (var number in numbers)
@@ -36,9 +36,9 @@ public class Program
         }
     }
 
-    public static RandomParams GenerateRandomParams(int lowerLimit, int upperLimit, int count)
+    public static RandomNumbersParams GenerateRandomNumbersParams(int lowerLimit, int upperLimit, int count)
     {
-        return new RandomParams
+        return new RandomNumbersParams
         {
             LowerLimit = lowerLimit,
             UpperLimit = upperLimit,
@@ -46,14 +46,14 @@ public class Program
         };
     }
 
-    public static IEnumerable<int> GenerateRandomNumbers(RandomParams randomParams)
+    public static IEnumerable<int> GenerateRandomNumbers(RandomNumbersParams randomNumbersParams)
     {
         var randomGenerator = new Random();
         var randomNumbers = new List<int>();
 
-        for (var i = 0; i < randomParams.Count; i++)
+        for (var i = 0; i < randomNumbersParams.Count; i++)
         {
-            randomNumbers.Add(randomGenerator.Next(randomParams.LowerLimit, randomParams.UpperLimit + 1));
+            randomNumbers.Add(randomGenerator.Next(randomNumbersParams.LowerLimit, randomNumbersParams.UpperLimit + 1));
         }
 
         return randomNumbers;
