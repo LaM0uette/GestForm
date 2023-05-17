@@ -1,4 +1,5 @@
-﻿using GestForm.DivisibilityRules;
+﻿using System.Diagnostics.CodeAnalysis;
+using GestForm.DivisibilityRules;
 
 namespace GestForm;
 
@@ -24,6 +25,7 @@ public class Program
 
     #region Functions
 
+    [ExcludeFromCodeCoverage]
     public static void Main()
     {
         var randomNumbersParams = GenerateRandomNumbersParams(-1000, 1000, 50);
